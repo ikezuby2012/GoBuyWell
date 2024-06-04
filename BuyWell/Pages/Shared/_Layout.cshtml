@@ -1,0 +1,86 @@
+﻿@{
+    var flexVar = "flex items-center";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover the perfect smartphone for you at our mobile phone emporium! From sleek designs to cutting-edge features, find your ideal companion for staying connected and organized on the go. Explore our curated collection today and step into the future of mobile technology!">
+    <title>@ViewData["Title"] - BuyWell</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BuyWell.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="font-Roboto bg-[#FFFFFF]">
+    <header class="relative">
+        <div class="bg-black">
+            <div class="text-[#FFFFFF] container flex items-center justify-between px-4 py-2">
+                <span>
+                    &nbsp;
+                </span>
+                <span class="">
+                    Sign up and get 20% off to your first order. <a asp-page="/register">Sign Up Now</a>
+                </span>
+                <span class="h-4 w-4 cursor-pointer">
+                    <i class="material-icons">clear</i>
+                </span>
+            </div>
+        </div>
+        
+        <div class="container flex items-center gap-x-5 border-b py-3">
+            <div class="@flexVar w-1/2 justify-between">
+                <span>
+                    <img class="h-8 w-auto" src="~/assets/SHOP.CO.svg" alt="" />
+                </span>
+                <div class="@flexVar justify-evenly gap-x-6 px-4">
+                    <small class="text-base font-medium leading-none text-black max-md:text-sm">
+                        <a asp-page="shop" class="capitalize">shop</a>
+                    </small>
+                    <small class="text-base font-medium leading-none text-black transition-all duration-300 hover:border-stone-200 hover:border-b max-md:text-sm">
+                        <a asp-page="onSale" class="capitalize">On Sale</a>
+                    </small>
+                    <small class="text-base font-medium leading-none text-black transition-all duration-300 hover:border-stone-200 hover:border-b max-md:text-sm">
+                        <a asp-page="NewArrivals" class="capitalize">New Arrivals</a>
+                    </small>
+                    <small class="text-base font-medium leading-none text-black transition-all duration-300 hover:border-stone-200 hover:border-b max-md:text-sm">
+                        <a asp-page="Brands" class="capitalize">Brands</a>
+                    </small>
+                </div>
+            </div>
+            <div class="@flexVar flex-1">
+                <span class="@flexVar relative mr-auto w-full">
+                    <img class="z-10 h-4 w-4" src="~/assets/icons-svg/search.svg" alt="" />
+                    <input type="search"
+                           value=""
+                           placeholder="Search for products"
+                           class="flex-1 rounded-[62px] bg-[#F0F0F0] -ml-5 p-1 pl-6 text-white placeholder:text-[13px] placeholder:text-[#72777B] placeholder:font-lato placeholder:tracking-[0.5px] focus:outline-none dark:text-black" />
+                </span>
+                <span class="@flexVar gap-x-2">
+                    <a href="" class="p-2.5">
+                        <img class="h-6 w-6" src="~/assets/icons-svg/cart.svg" alt="cart" />
+                    </a>
+                    <a href="" class="p-2.5">
+                        <img class="h-6 w-6" src="~/assets/icons-svg/user.svg" alt="user profile" />
+                    </a>
+                </span>
+            </div>
+        </div>
+    </header>
+    <main role="main" class="z-10 relative -mt-2">
+        @RenderBody()
+    </main>
+
+    <footer class="">
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

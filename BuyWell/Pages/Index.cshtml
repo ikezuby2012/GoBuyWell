@@ -1,0 +1,264 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "shop with us ~ landing page";
+    // Layout = "~/Pages/Shared/_AppLayout.csHtml";
+
+    int[] starFive = new int[] { 1, 2, 3, 4, 5 };
+}
+<section class="hero-section h-[85vh] relative bg-cover bg-top">
+    <div class="container space-y-6 py-10">
+        <h2 class="font-Aclonia mb-1.5 text-6xl [&>span]:block">
+            <span>FIND CLOTHES</span>
+            <span>THAT MATCHES</span>
+            <span>YOUR STYLE</span>
+        </h2>
+        <small class="font-poppins text-[#000000] text-base">
+            <span class="block">Browse through our diverse range of meticulously crafted garments, designed</span>
+            <span class="block">bring out your individuality and cater to your sense of style.</span>
+        </small>
+        <button class="font-lato gap-2 rounded-full bg-black px-12 py-3 text-sm font-medium text-white disabled:shadow-[inset_999px_999px_0px_rgba(255,_255,_255,_0.2)] disabled:cursor-not-allowed disabled:isolate disabled:bg-pale-purple md:text-lg md:max-w-[343px]">
+            Shop now
+        </button>
+        <div class="font-lato flex items-center gap-x-4 not:last-of-type:border-r">
+            <div class="flex flex-col space-y-0.5 px-1.5 py-2">
+                <bold class="text-4xl font-bold">200+</bold>
+                <small class="text-base font-light capitalize">international brands</small>
+            </div>
+            <div class="flex flex-col space-y-0.5 px-1.5 py-2">
+                <bold class="text-4xl font-bold">2,000+</bold>
+                <small class="text-base font-light capitalize">High Quality Products</small>
+            </div>
+            <div class="flex flex-col space-y-0.5 px-1.5 py-2">
+                <bold class="text-4xl font-bold">30,000+</bold>
+                <small class="text-base font-light capitalize">Happy customers</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="justify-around bg-black px-4 py-5">
+    <div class="container flex items-center justify-between">
+        <div class="">
+            <img class="h-8 w-auto" src="/assets/icons-svg/versace.svg" alt="versace" />
+        </div>
+
+        <div class="">
+            <img class="h-8 w-auto" src="/assets/icons-svg/zara.svg" alt="zara" />
+        </div>
+
+        <div class="">
+            <img class="h-8 w-auto" src="/assets/icons-svg/gucci.svg" alt="gucci" />
+        </div>
+
+        <div class="">
+            <img class="h-8 w-auto" src="/assets/icons-svg/prada.svg" alt="prada" />
+        </div>
+
+        <div class="">
+            <img class="h-8 w-auto" src="/assets/icons-svg/calvin-klein.svg" alt="calvin klein" />
+        </div>
+    </div>
+</section>
+
+<section class="px-12 py-10">
+    <div class="container flex flex-col items-center space-y-4 border-b border-stone-300 py-4">
+        <h2 class="font-montserrat py-4 text-center text-5xl font-extrabold uppercase">new arrivals</h2>
+
+        <div class="mx-2 flex items-center gap-x-4">
+            <div class="flex flex-col space-y-1">
+                <span>
+                    <img class="h-[18rem] w-auto rounded-3xl" src="/assets/product1.png" alt="" />
+                </span>
+                <h4 class="text-[20px] font-bold">T-Shirt with Tape Details</h4>
+                <div class="flex items-center gap-x-1.5">
+                    <div class="flex items-center gap-x-0.5 space-x-0.5">
+                        @foreach (var el in starFive)
+                        {
+                            <i class="material-icons small text-amber-500">star</i>
+                        }
+                    </div>
+                    
+                    <span class="font-lato text-sm font-normal text-stone-600">4.5/5</span>
+                </div>
+                <div class="flex items-center gap-x-1">
+                    <span class="text-2xl font-medium leading-none text-black">
+                        $120
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-1">
+                <span>
+                    <img class="h-[18rem] w-auto rounded-3xl" src="/assets/product2.png" alt="" />
+                </span>
+                <h4 class="text-[20px] font-bold text-black">SKINNY FIT JEANS</h4>
+                <div class="flex items-center gap-x-1">
+                    <div class="flex items-center gap-x-0.5 space-x-0.5">
+                        @foreach (var el in starFive)
+                        {
+                            <i class="material-icons small text-amber-500">star</i>
+                        }
+                    </div>
+                    <span class="font-lato text-sm font-normal text-stone-600">4.5/5</span>
+                </div>
+                <div class="flex items-center gap-x-1">
+                    <span class="text-2xl font-medium leading-none text-black">
+                        $120
+                    </span>
+                    <span class="text-2xl text-stone-300 line-through">$260</span>
+                    <span class="text-[#FF3333] rounded-3xl bg-amber-100 p-1.5 text-base leading-none">-20%</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-1">
+                <span>
+                    <img class="h-[18rem] w-auto rounded-3xl" src="/assets/product3.png" alt="" />
+                </span>
+                <h4 class="text-[20px] font-bold text-black">CHECKERED SHIRT</h4>
+                <div class="flex items-center gap-x-1">
+                    <div class="flex items-center gap-x-0.5 space-x-0.5">
+                        @foreach (var el in starFive)
+                        {
+                            <i class="material-icons small text-amber-500">star</i>
+                        }
+                    </div>
+                    <span class="font-lato text-sm font-normal text-stone-600">4.5/5</span>
+                </div>
+                <div class="">
+                    <span class="text-2xl font-medium leading-none text-black">
+                        $120
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-1">
+                <span>
+                    <img class="h-[18rem] w-auto rounded-3xl" src="/assets/product4.png" alt="" />
+                </span>
+                <h4 class="text-[20px] font-bold text-black">SLEEVE STRIPED T-SHIRT</h4>
+                <div class="flex items-center gap-x-1">
+                    <div class="flex items-center gap-x-0.5 space-x-0.5">
+                        @foreach (var el in starFive)
+                        {
+                            <i class="material-icons small text-amber-500">star</i>
+                        }
+                    </div>
+                    <span class="font-lato text-sm font-normal text-stone-600">4.5/5</span>
+                </div>
+                <div class="flex items-center gap-x-1">
+                    <span class="text-2xl font-medium leading-none text-black">
+                        $120
+                    </span>
+                    <span class="text-2xl text-stone-300 line-through">$160</span>
+                    <span class="text-[#FF3333] rounded-3xl bg-amber-100 p-1.5 text-base leading-none">-30%</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="font-lato my-4 gap-2 rounded-full border border-stone-200 bg-transparent px-16 py-3 text-center text-base font-medium capitalize text-black transition-all duration-500 hover:bg-stone-800 hover:text-stone-200 disabled:shadow-[inset_999px_999px_0px_rgba(255,_255,_255,_0.2)] disabled:cursor-not-allowed disabled:isolate disabled:bg-pale-purple md:text-lg md:max-w-[343px]">
+            View All
+        </button>
+    </div>
+</section>
+
+<section class="px-12 py-10">
+    <div class="container flex flex-col items-center space-y-4 py-4">
+        <h2 class="font-montserrat py-4 text-center text-5xl font-extrabold uppercase">Top Selling</h2>
+
+        <div class="mx-2 flex items-center gap-x-4">
+            <div class="flex flex-col space-y-1">
+                <span>
+                    <img class="h-[18rem] w-auto rounded-3xl" src="/assets/product1.png" alt="" />
+                </span>
+                <h4 class="text-[20px] font-bold">T-Shirt with Tape Details</h4>
+                <div class="flex items-center gap-x-1.5">
+                    <div class="flex items-center gap-x-0.5 space-x-0.5">
+                        @foreach (var el in starFive)
+                        {
+                            <i class="material-icons small text-amber-500">star</i>
+                        }
+                    </div>
+
+                    <span class="font-lato text-sm font-normal text-stone-600">4.5/5</span>
+                </div>
+                <div class="flex items-center gap-x-1">
+                    <span class="text-2xl font-medium leading-none text-black">
+                        $120
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-1">
+                <span>
+                    <img class="h-[18rem] w-auto rounded-3xl" src="/assets/product2.png" alt="" />
+                </span>
+                <h4 class="text-[20px] font-bold text-black">SKINNY FIT JEANS</h4>
+                <div class="flex items-center gap-x-1">
+                    <div class="flex items-center gap-x-0.5 space-x-0.5">
+                        @foreach (var el in starFive)
+                        {
+                            <i class="material-icons small text-amber-500">star</i>
+                        }
+                    </div>
+                    <span class="font-lato text-sm font-normal text-stone-600">4.5/5</span>
+                </div>
+                <div class="flex items-center gap-x-1">
+                    <span class="text-2xl font-medium leading-none text-black">
+                        $120
+                    </span>
+                    <span class="text-2xl text-stone-300 line-through">$260</span>
+                    <span class="text-[#FF3333] rounded-3xl bg-amber-100 p-1.5 text-base leading-none">-20%</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-1">
+                <span>
+                    <img class="h-[18rem] w-auto rounded-3xl" src="/assets/product3.png" alt="" />
+                </span>
+                <h4 class="text-[20px] font-bold text-black">CHECKERED SHIRT</h4>
+                <div class="flex items-center gap-x-1">
+                    <div class="flex items-center gap-x-0.5 space-x-0.5">
+                        @foreach (var el in starFive)
+                        {
+                            <i class="material-icons small text-amber-500">star</i>
+                        }
+                    </div>
+                    <span class="font-lato text-sm font-normal text-stone-600">4.5/5</span>
+                </div>
+                <div class="">
+                    <span class="text-2xl font-medium leading-none text-black">
+                        $120
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-1">
+                <span>
+                    <img class="h-[18rem] w-auto rounded-3xl" src="/assets/product4.png" alt="" />
+                </span>
+                <h4 class="text-[20px] font-bold text-black">SLEEVE STRIPED T-SHIRT</h4>
+                <div class="flex items-center gap-x-1">
+                    <div class="flex items-center gap-x-0.5 space-x-0.5">
+                        @foreach (var el in starFive)
+                        {
+                            <i class="material-icons small text-amber-500">star</i>
+                        }
+                    </div>
+                    <span class="font-lato text-sm font-normal text-stone-600">4.5/5</span>
+                </div>
+                <div class="flex items-center gap-x-1">
+                    <span class="text-2xl font-medium leading-none text-black">
+                        $120
+                    </span>
+                    <span class="text-2xl text-stone-300 line-through">$160</span>
+                    <span class="text-[#FF3333] rounded-3xl bg-amber-100 p-1.5 text-base leading-none">-30%</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="font-lato my-4 gap-2 rounded-full border border-stone-200 bg-transparent px-16 py-3 text-center text-base font-medium capitalize text-black transition-all duration-500 hover:bg-stone-800 hover:text-stone-200 disabled:shadow-[inset_999px_999px_0px_rgba(255,_255,_255,_0.2)] disabled:cursor-not-allowed disabled:isolate disabled:bg-pale-purple md:text-lg md:max-w-[343px]">
+            View All
+        </button>
+    </div>
+</section>
